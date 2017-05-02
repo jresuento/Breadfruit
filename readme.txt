@@ -1,1 +1,1 @@
-Breadfruit is a debugging framework that define debugging concepts and automize it.
+Breadfruit is a debugging framework that define debugging concepts and automize debugging by creating predefined set of commands.
