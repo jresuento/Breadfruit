@@ -15,6 +15,5 @@ describe('Ad Display', function(){
 			it('Ad ' + uid + ' bannerCC should be defined', function(){
 				expect(ads._bannerCC).not.toBeUndefined();
 			});
-		});
-
+		});	
 });
