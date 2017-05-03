@@ -1,1 +1,1 @@
-Breadfruit is a debugging framework that define debugging concepts and automize debugging by creating predefined set of commands.
+Breadfruit is a automated debugging project that uses jasmine js.
