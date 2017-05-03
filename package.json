@@ -12,6 +12,12 @@
   },
   "author": "resuentojac@gmail.com",
   "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts" : {
+  	"start": "http-server -a localhost -p 9000 -c-1 ./app/web-client"
+  },
   "bugs": {
     "url": "https://github.com/jresuento/Breadfruit/issues"
   },
