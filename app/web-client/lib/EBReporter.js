@@ -1,29 +1,31 @@
 var EBReporter = {
 	jasmineStarted: function(suiteInfo) {
-		console.log('Running suite with ' + suiteInfo.totalSpecsDefined);
+		console.group('Running suite with ' + suiteInfo.totalSpecsDefined);
 	},
 	suiteStarted: function(result) {
-		console.log('Suite started: ' + result.description + ' whose full description is: ' + result.fullName);
+		console.group('Suite started: ' + result.description);
 	},
 	specStarted: function(result) {
-		console.log('Spec started: ' + result.description + ' whose full description is: ' + result.fullName);
+		console.group('Spec started: ' + result.description);
 	},
 	specDone: function(result) {
-		console.log('Spec: ' + result.description + ' was ' + result.status);
+		console.log(result.description + ' has ' + result.status);
 		for(var i = 0; i < result.failedExpectations.length; i++) {
-			console.log('Failure: ' + result.failedExpectations[i].message);
-			console.log(result.failedExpectations[i].stack);
+			console.error('Failure: ' + result.failedExpectations[i].message);
+			//console.log(result.failedExpectations[i].stack);
 		}
-		console.log(result.passedExpectations.length);
+		//console.log('passedExpectations', result.passedExpectations.length);
+		console.groupEnd();
 	},
 	suiteDone: function(result) {
-		console.log('Suite: ' + result.description + ' was ' + result.status);
+		console.log('Suite: ' + result.description + ' has ' + result.status);
 		for(var i = 0; i < result.failedExpectations.length; i++) {
-			console.log('AfterAll ' + result.failedExpectations[i].message);
-			console.log(result.failedExpectations[i].stack);
+			console.error('AfterAll ' + result.failedExpectations[i].message);
+			//console.log(result.failedExpectations[i].stack);
 		}
+		console.groupEnd();
 	},
 	jasmineDone: function() {
-		console.log('Finished suite');
+		console.groupEnd('Finished suite');
 	}
 };

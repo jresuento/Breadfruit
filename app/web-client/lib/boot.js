@@ -8,7 +8,7 @@
 	} else {
 		extend(window, jasmineInterface);
 	}
-
+	
 	env.addReporter(EBReporter);
 
 	window.setTimeout = window.setTimeout;
@@ -16,14 +16,9 @@
 	window.clearTimeout = window.clearTimeout;
 	window.clearInterval = window.clearInterval;
 
-	var currentWindowOnload = window.onload;
-
-	window.onload = function() {
-		if (currentWindowOnload) {
-			currentWindowOnload();
-		}
-		env.execute(env.topSuite().id);
-	};
+	window.addEventListener('load', function(){
+		//env.execute();	
+	});	
 
 	function extend(destination, source) {
 		for (var property in source) destination[property] = source[property];

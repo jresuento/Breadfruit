@@ -1,1 +1,1 @@
-Breadfruit is a automated debugging project that uses jasmine js.
+Breadfruit is a debugging project based on jasmine that automatically detects runtime errors based from the executed spec.
