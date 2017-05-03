@@ -1,0 +1,19 @@
+{
+  "name": "breadfruit",
+  "version": "1.0.0",
+  "description": "Breadfruit is a automated debugging project that uses jasmine js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jresuento/Breadfruit.git"
+  },
+  "author": "resuentojac@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jresuento/Breadfruit/issues"
+  },
+  "homepage": "https://github.com/jresuento/Breadfruit#readme"
+}
